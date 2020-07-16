@@ -47,13 +47,13 @@ variables:
 steps:
 - task: UseDotNet@2
   displayName: 'Use .NET Core SDK 3.1.300'
-  imputs:
+  inputs:
     packageType: sdk
     version: 3.1.300
 
 - task: Npm@1
   displayName: 'Run npm install'
-  imputs:
+  inputs:
     verbose: false
 
 - script: './node_modules/.bin/node-sass Tailspin.SpaceGame.Web/wwwroot--output Tailspin.SpaceGame.Web/wwwroot'
